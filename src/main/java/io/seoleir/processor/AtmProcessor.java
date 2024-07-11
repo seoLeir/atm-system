@@ -26,8 +26,6 @@ public class AtmProcessor {
     private static final Pattern cardExpirationPattern = Pattern.compile("(0[1-9]|1[0-2])/\\d{2}");
 
     public AtmProcessor() {
-        users.put("seoleir", new User("Mirolim", 998944144426L, "seoleir", "123", List.of(new UserCreditCard("1111222233334444", "seoleir", "12/25", 90000.0))));
-        users.put("shaxnoza", new User("Shaxnoza", 998944144426L, "shaxnoza", "321", List.of(new UserCreditCard("5555666677778888", "shaxnoza", "12/25", 0.0))));
         strategies.put(TransactionType.WITHDRAW, new WithdrawStrategy());
         strategies.put(TransactionType.DEPOSIT, new DepositStrategy());
         strategies.put(TransactionType.TRANSFER, new TransferStrategy());
